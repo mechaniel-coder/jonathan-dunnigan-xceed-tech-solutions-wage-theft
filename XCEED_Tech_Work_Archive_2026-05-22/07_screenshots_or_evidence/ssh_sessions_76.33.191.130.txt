@@ -1,0 +1,44 @@
+/var/log/syslog.1:May 21 13:21:55 Tower sshd-session[22684]: Accepted publickey for root from 76.33.191.130 port 42204 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 13:22:05 Tower sshd-session[23207]: Accepted publickey for root from 76.33.191.130 port 42795 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 13:22:19 Tower sshd-session[24227]: Accepted publickey for root from 76.33.191.130 port 44446 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 13:24:19 Tower sshd-session[29565]: Accepted publickey for root from 76.33.191.130 port 44536 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 13:25:06 Tower sshd-session[31877]: Accepted publickey for root from 76.33.191.130 port 43213 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 13:35:02 Tower sshd-session[61301]: Accepted publickey for root from 76.33.191.130 port 44044 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:14:44 Tower sshd-session[700188]: Accepted publickey for root from 76.33.191.130 port 44299 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:14:59 Tower sshd-session[700654]: Accepted publickey for root from 76.33.191.130 port 44680 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:15:11 Tower sshd-session[701010]: Accepted publickey for root from 76.33.191.130 port 44648 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:15:17 Tower sshd-session[701227]: Accepted publickey for root from 76.33.191.130 port 43841 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:15:27 Tower sshd-session[701542]: Accepted publickey for root from 76.33.191.130 port 43014 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:16:02 Tower sshd-session[702644]: Accepted publickey for root from 76.33.191.130 port 42292 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:16:09 Tower sshd-session[702845]: Accepted publickey for root from 76.33.191.130 port 44137 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:19:48 Tower sshd-session[709560]: Accepted publickey for root from 76.33.191.130 port 43345 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:21:31 Tower sshd-session[713163]: Accepted publickey for root from 76.33.191.130 port 43656 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:21:39 Tower sshd-session[713489]: Accepted publickey for root from 76.33.191.130 port 44299 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:22:09 Tower sshd-session[714616]: Accepted publickey for root from 76.33.191.130 port 44497 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:22:58 Tower sshd-session[716039]: Accepted publickey for root from 76.33.191.130 port 43075 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:23:06 Tower sshd-session[716302]: Accepted publickey for root from 76.33.191.130 port 44481 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:23:33 Tower sshd-session[717118]: Accepted publickey for root from 76.33.191.130 port 43248 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:24:17 Tower sshd-session[718517]: Accepted publickey for root from 76.33.191.130 port 43493 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:24:59 Tower sshd-session[719767]: Accepted publickey for root from 76.33.191.130 port 43372 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:25:08 Tower sshd-session[720061]: Accepted publickey for root from 76.33.191.130 port 43047 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:25:35 Tower sshd-session[720913]: Accepted publickey for root from 76.33.191.130 port 42695 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:26:13 Tower sshd-session[722043]: Accepted publickey for root from 76.33.191.130 port 44017 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:26:36 Tower sshd-session[722760]: Accepted publickey for root from 76.33.191.130 port 43367 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:28:45 Tower sshd-session[728333]: Accepted publickey for root from 76.33.191.130 port 43764 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:29:43 Tower sshd-session[730338]: Accepted publickey for root from 76.33.191.130 port 44353 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:29:45 Tower sshd-session[730378]: Accepted publickey for root from 76.33.191.130 port 42412 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:30:08 Tower sshd-session[731178]: Accepted publickey for root from 76.33.191.130 port 44595 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:30:28 Tower sshd-session[731876]: Accepted publickey for root from 76.33.191.130 port 42866 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:30:58 Tower sshd-session[733075]: Accepted publickey for root from 76.33.191.130 port 43030 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:31:34 Tower sshd-session[734307]: Accepted publickey for root from 76.33.191.130 port 42719 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:31:46 Tower sshd-session[734753]: Accepted publickey for root from 76.33.191.130 port 43652 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:32:17 Tower sshd-session[735811]: Accepted publickey for root from 76.33.191.130 port 44249 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:32:36 Tower sshd-session[736493]: Accepted publickey for root from 76.33.191.130 port 42649 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:32:58 Tower sshd-session[737248]: Accepted publickey for root from 76.33.191.130 port 42014 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:33:08 Tower sshd-session[737675]: Accepted publickey for root from 76.33.191.130 port 44380 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+/var/log/syslog.1:May 21 18:33:27 Tower sshd-session[738469]: Accepted publickey for root from 76.33.191.130 port 43243 ssh2: ED25519 SHA256:Jklifd0eDQoMs4cIWPftyza5B3YJTnBNqQHmt2MAxxQ
+
+---
+NOTE: Syslog only retains 2 rotations. Server rebooted May 21 13:14.
+Logs before that reboot (May 19-20 activity) are not available in syslog.
+Git commit history covers May 19-21 and serves as primary timestamp evidence for that period.

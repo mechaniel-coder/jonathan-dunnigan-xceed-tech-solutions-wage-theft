@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Coins — Skyhigh Hosting</title>
+  <style>
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --border:    #30363d;
+      --accent:    #00AAFF;
+      --text:      #e6edf3;
+      --muted:     #8b949e;
+      --success:   #3fb950;
+      --danger:    #f85149;
+      --warn:      #d29922;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    header .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+    header .user-info img {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+    }
+    header .btn-login, header .btn-logout {
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+    header .btn-login  { background: #5865F2; color: #fff; }
+    header .btn-logout { background: var(--border); color: var(--text); }
+
+    main { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); margin-bottom: 36px; }
+
+    /* ── Notice banner ── */
+    .banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-bottom: 28px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .banner.success { border-left-color: var(--success); color: var(--success); }
+    .banner.error   { border-left-color: var(--danger);  color: var(--danger);  }
+
+    /* ── Package grid ── */
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .package-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color .15s;
+    }
+    .package-card:hover { border-color: var(--accent); }
+    .package-card .name {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .package-card .coins {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .package-card .coins span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-left: 4px;
+    }
+    .package-card .price {
+      font-size: 1.1rem;
+      color: var(--success);
+      font-weight: 600;
+    }
+    .package-card .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .btn-pay {
+      padding: 9px 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      width: 100%;
+      transition: opacity .15s;
+    }
+    .btn-pay:disabled { opacity: .5; cursor: not-allowed; }
+    .btn-stripe  { background: #635bff; color: #fff; }
+    .btn-paypal  { background: #ffc439; color: #003087; }
+    .btn-square  { background: #3e4348; color: #fff; }
+
+    .loading-msg {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 32px 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🚀 Skyhigh Hosting — Coin Store</div>
+  <div class="user-info" id="userArea">
+    <a href="/buy/auth" class="btn-login">Login with Discord</a>
+  </div>
+</header>
+
+<main>
+  <h1>Buy Coins</h1>
+  <p class="subtitle">Coins are used to purchase game servers and upgrades in the Skyhigh Hosting Discord server.</p>
+
+  <div id="banner" class="banner" style="display:none;"></div>
+
+  <div id="packages" class="loading-msg">Loading packages…</div>
+</main>
+
+<footer>Skyhigh Hosting &bull; Coins are non-refundable virtual currency.</footer>
+
+<script>
+(async () => {
+  // ── Read query params for success/error ──────────────────────────────────
+  const params  = new URLSearchParams(location.search);
+  const banner  = document.getElementById('banner');
+
+  if (params.has('error')) {
+    banner.textContent = 'Login failed. Please try again.';
+    banner.className   = 'banner error';
+    banner.style.display = 'block';
+  }
+
+  // ── Load user session ────────────────────────────────────────────────────
+  let user = null;
+  try {
+    const r = await fetch('/buy/me');
+    const d = await r.json();
+    if (d.authenticated) {
+      user = d;
+      const avatarUrl = d.avatar
+        ? `https://cdn.discordapp.com/avatars/${d.id}/${d.avatar}.png?size=64`
+        : `https://cdn.discordapp.com/embed/avatars/0.png`;
+      document.getElementById('userArea').innerHTML = `
+        <img src="${avatarUrl}" alt="avatar" />
+        <span>${escHtml(d.username)}</span>
+        <a href="/buy/logout" class="btn-logout">Logout</a>
+      `;
+    }
+  } catch { /* ignore */ }
+
+  // ── Load packages ────────────────────────────────────────────────────────
+  const pkgsEl = document.getElementById('packages');
+  let packages = [];
+  try {
+    const r  = await fetch('/buy/packages');
+    packages = await r.json();
+  } catch {
+    pkgsEl.innerHTML = '<p style="color:var(--danger)">Failed to load packages. Please refresh.</p>';
+    return;
+  }
+
+  if (!packages.length) {
+    pkgsEl.innerHTML = '<p style="color:var(--muted)">No coin packages are available right now. Check back soon!</p>';
+    return;
+  }
+
+  // ── Render ───────────────────────────────────────────────────────────────
+  pkgsEl.className = 'packages';
+  pkgsEl.innerHTML = packages.map(pkg => `
+    <div class="package-card">
+      <div class="name">${escHtml(pkg.name)}</div>
+      <div class="coins">${pkg.coins.toLocaleString()}<span>coins</span></div>
+      <div class="price">$${(pkg.price_cents / 100).toFixed(2)}</div>
+      <div class="actions">
+        <button class="btn-pay btn-stripe"  onclick="checkout('stripe',  ${pkg.id})" ${!user ? 'disabled title="Login first"' : ''}>Pay with Card (Stripe)</button>
+        <button class="btn-pay btn-paypal"  onclick="checkout('paypal',  ${pkg.id})" ${!user ? 'disabled title="Login first"' : ''}>Pay with PayPal</button>
+        <button class="btn-pay btn-square"  onclick="checkout('square',  ${pkg.id})" ${!user ? 'disabled title="Login first"' : ''}>Pay with Square</button>
+      </div>
+    </div>
+  `).join('');
+
+  if (!user) {
+    banner.textContent = 'Login with Discord to purchase coins.';
+    banner.className   = 'banner';
+    banner.style.display = 'block';
+  }
+})();
+
+async function checkout(processor, packageId) {
+  try {
+    const r = await fetch(`/buy/checkout/${processor}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ packageId }),
+    });
+    if (r.status === 401) {
+      window.location.href = '/buy/auth';
+      return;
+    }
+    const d = await r.json();
+    if (d.url) {
+      window.location.href = d.url;
+    } else {
+      alert('Checkout failed: ' + (d.error || 'Unknown error'));
+    }
+  } catch (err) {
+    alert('Request failed: ' + err.message);
+  }
+}
+
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+</body>
+</html>

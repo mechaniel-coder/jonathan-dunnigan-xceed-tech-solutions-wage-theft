@@ -1,0 +1,20 @@
+{
+  "name": "skyhigh-hosting-bot",
+  "version": "1.0.0",
+  "description": "Official Skyhigh Hosting Discord Bot — All-in-one server management",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.3.0",
+    "discord-api-types": "^0.37.97",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "mysql2": "^3.9.7",
+    "node-cron": "^3.0.3",
+    "winston": "^3.19.0"
+  }
+}

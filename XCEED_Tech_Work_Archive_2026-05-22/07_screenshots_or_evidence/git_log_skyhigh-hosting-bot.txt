@@ -1,0 +1,58 @@
+eb48ad5 2026-05-21 12:17:48 -0700 perf: cache user creation layer to speed up rebuilds
+bfbcb79 2026-05-21 12:06:32 -0700 fix: pass LICENSE_TOKEN env var to bot container
+5907077 2026-05-21 11:31:02 -0700 fix: use /tmp/docker-compose full path (Unraid noexec on /usr/bin)
+25c2a5a 2026-05-21 11:30:33 -0700 fix: use /tmp/docker-compose full path (Unraid noexec on /usr/bin)
+fad071a 2026-05-21 11:24:15 -0700 fix: use docker-compose (V1 binary) instead of docker compose plugin
+43f5680 2026-05-21 11:19:41 -0700 fix: add missing env vars and skyhigh-net external network to compose
+89a1449 2026-05-21 11:01:23 -0700 fix: mount SSH key in alpine/git container for private repo access
+4758b54 2026-05-21 10:58:40 -0700 chore: use Docker-based git pull in deploy task (no host git needed)
+a6e5440 2026-05-21 10:50:43 -0700 chore: add VS Code tasks for Remote SSH deploy
+43ae258 2026-05-21 09:16:37 -0700 fix: Nextdactyl Users page fallback + /link DM improvements
+bebb186 2026-05-20 23:01:28 -0700 fix: add dotenv so .env file is loaded at startup
+7e463a0 2026-05-20 22:55:00 -0700 feat: RSA license validation on startup (licenseCheck.js + index.js enforce)
+d3916e3 2026-05-20 19:15:49 -0700 feat: edit monitor — change name, URL, alert channel from dashboard
+b05f1d4 2026-05-20 19:11:18 -0700 fix: immediate first check on monitor start + per-server check logging
+1e10117 2026-05-20 19:04:58 -0700 feat: full health check monitors with CPU/RAM/disk, configurable interval, dashboard UI
+7240e0a 2026-05-20 18:17:21 -0700 fix: correct last_status comparison for VARCHAR schema, skip alerts on first check
+fbb8504 2026-05-20 18:08:04 -0700 fix: ping @here on both down and up monitor events
+c5f0922 2026-05-20 18:03:33 -0700 feat: Link My Account panel button with modal
+c630de3 2026-05-20 17:32:23 -0700 feat: Payment Processors config page — DB-backed keys editable from dashboard
+2e3cd36 2026-05-20 17:12:32 -0700 feat: add Coin Packages, Transactions, and Nextdactyl Users pages to dashboard
+8674326 2026-05-20 16:29:28 -0700 feat: add payment portal, Docker log streaming, and admin API extensions
+41dd3ac 2026-05-20 15:37:50 -0700 fix: remove leftover verifyPanelApiKey that was overwriting module.exports
+18a7d25 2026-05-20 15:31:11 -0700 deploy-commands: clear guild commands to remove duplicates
+5392f8b 2026-05-20 15:29:02 -0700 link: replace ptlc_ key flow with email + Application API (auto-create panel accounts)
+b639cfd 2026-05-20 14:46:07 -0700 feat: sync /link data to nextdactyl for unified account registration
+2c972fd 2026-05-20 12:52:13 -0700 fix: use Pterodactyl client API key for instant account linking
+64701eb 2026-05-20 12:02:57 -0700 feat: comprehensive audit logging for all server events
+54b54cf 2026-05-20 11:48:55 -0700 fix: replace deprecated ephemeral:true with flags:64 across all commands
+23d878b 2026-05-20 11:40:15 -0700 feat: /link command with website API auto-verify + admin-confirm fallback
+f3cc837 2026-05-20 10:30:56 -0700 fix: remove last customRules reference in rules subcommand
+9025881 2026-05-20 10:24:24 -0700 fix: remove custom rules option - rules are now hardcoded
+a7d4a90 2026-05-20 10:12:54 -0700 feat: dashboard Verification settings section + rules_accept_role DB default
+cd980d6 2026-05-20 09:34:54 -0700 feat: /verify rules role option adds Accept button assigning a separate role
+4c41b29 2026-05-20 09:32:19 -0700 feat: add /verify rules subcommand for rules-only embed without accept button
+efe79c3 2026-05-20 09:20:23 -0700 debug: split deploy steps to isolate which API call fails
+8ae0561 2026-05-20 09:18:34 -0700 fix: always use API-fetched app ID, ignore CLIENT_ID env var
+b12af89 2026-05-20 09:17:01 -0700 fix: deploy-commands fetches app ID from API instead of guessing from token
+d69f68d 2026-05-20 09:09:16 -0700 feat: verify setup posts rules panel with Accept button, remove duplicate verification command
+68528a5 2026-05-20 08:54:00 -0700 fix: role hierarchy check before assign/remove to prevent Missing Permissions crash
+ec2ba22 2026-05-20 00:23:02 -0700 feat: reaction roles + ephemeral on-join role picker
+131b84c 2026-05-19 23:56:37 -0700 fix: use query() not db.query() in role panels and temp roles dashboard routes
+4564806 2026-05-19 23:43:40 -0700 fix: remove duplicate orphaned code block from guildMemberAdd.js
+5a9ae57 2026-05-19 23:35:35 -0700 fix: ready event name, levelroles delete query, deploy path, mod hierarchy checks, messageUpdate null guard
+4871027 2026-05-19 23:24:27 -0700 feat: role panels, temp roles, verify gate, goodbye messages, account age gate
+e0109fe 2026-05-19 23:05:27 -0700 feat: add deploy-commands.js for slash command registration
+02b1689 2026-05-19 22:49:25 -0700 feat: channel mgmt, auto-mod, auto-role, reminders, onboarding, unban/untimeout/slowmode
+2a6c50e 2026-05-19 22:25:52 -0700 Dashboard: full bot config from web - leveling editor, level roles, auto-responders, custom cmds, monitors, settings dropdowns
+e95026c 2026-05-19 22:07:19 -0700 Fix: add explicit /dashboard/login route
+af19691 2026-05-19 22:03:11 -0700 Fix dashboard auth: protect index.html from static middleware
+26b08f7 2026-05-19 21:47:29 -0700 Add full web dashboard with Discord OAuth, API, live logs
+a7b3164 2026-05-19 21:16:49 -0700 Auto-detect app ID from token in deploy-commands
+4391e3d 2026-05-19 20:49:16 -0700 Fix ready event deprecation warning
+365affa 2026-05-19 20:31:05 -0700 Fix logs directory permissions in Dockerfile
+5644535 2026-05-19 20:22:50 -0700 Fix line endings for shell scripts
+7675eaa 2026-05-19 20:22:31 -0700 Add setup.sh for docker-compose-free deployment
+11c2770 2026-05-19 20:13:56 -0700 Add Dockerfile, update compose to build from source
+312215d 2026-05-19 19:59:41 -0700 Add docker-compose setup
+7e4e67d 2026-05-19 18:52:08 -0700 Initial commit — Skyhigh Hosting Discord Bot

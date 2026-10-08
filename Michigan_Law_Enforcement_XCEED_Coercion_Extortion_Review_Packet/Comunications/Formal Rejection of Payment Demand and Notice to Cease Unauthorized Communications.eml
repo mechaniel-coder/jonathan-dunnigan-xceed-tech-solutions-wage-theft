@@ -1,0 +1,281 @@
+Delivered-To: mechaniel@gmail.com
+Received: by 2002:a05:7412:2991:b0:1d7:dbe5:bd41 with SMTP id s17csp580925rda;
+        Sat, 30 May 2026 19:32:34 -0700 (PDT)
+X-Received: by 2002:a05:622a:2308:b0:50f:a53b:9d5 with SMTP id d75a77b69052e-5173a6218c1mr51748671cf.2.1780194754244;
+        Sat, 30 May 2026 19:32:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1780194754; cv=none;
+        d=google.com; s=arc-20240605;
+        b=OLxk5q+7NlJsD9j6DQFTnNEj+9dZgdlBy/t5PgGilqTJYWh0DmK1HOLtKX6lvDo/xZ
+         OqRbaEeLq2ATGfVeriktCuVYykOeM+geSHo31i73nqFV0Aq18P2qo3+eRiJvu8/4GdOc
+         P+qp8vdAdpTMaRxGOOzk660z5iJEz8h70l3qc6Z921ObH13eq57DyYUSM9nAmX7bXwGj
+         t/0F13E3As3OUZ4NPcVOV4YqIcj5K5ejpbV9OZIDp6IBc1tvgCyVM6lRkU/D8v+SsGrw
+         gyssKawfr0DZCKh3s0roGxYGYPCGdLEOz6eqfZVifABhPv3CGBuKFSGGPd5QX+nV1oPU
+         Lu6g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:references:message-id:to:from:date
+         :dkim-signature;
+        bh=rtSAGYxjXSZlTVK5/7wxPjxqVjp+yIivg/3YnwQ7Tzo=;
+        fh=OZb/HEXV4ZzT5JqwCx+bTnjDaoJRXL4pfb6Zqi0P+Xo=;
+        b=EdAMPlXKpyOgRkP20Jc03SVHGKwwGWelu0wGIQ6NYz8cw/GJg3/p4DKiSdVy3ANirC
+         rEZXXhVPuz9VQU10P3F5+KIEG2RWz1HkJXL0m6be/2ZMS9vgQAMHgebtGQ3FEpl2+3ED
+         jf79fg5lDIcr/YgrHXGqch55nasDq9xDdhgBAFCM7P512ioSKzcMtV1+Zj7ygdVWdG5A
+         oym2B7Af0vMoeTPnhCROAEk2fsVLOLzQHYiSD33eoZgWwkY5g9F4hAkSh9r8/uO2k2M2
+         xLUTY/gOzlsu8x0T/zQYip0xJ+XmDtsq/FgV8mOvcmAEDyGMev1+/nChbAMRQWm+wW/P
+         3TCg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="HxjwlQ7/";
+       spf=pass (google.com: domain of jzdunnigan@yahoo.com designates 66.163.190.33 as permitted sender) smtp.mailfrom=jzdunnigan@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <jzdunnigan@yahoo.com>
+Received: from sonic307-10.consmr.mail.ne1.yahoo.com (sonic307-10.consmr.mail.ne1.yahoo.com. [66.163.190.33])
+        by mx.google.com with ESMTPS id d75a77b69052e-51741daa93bsi29277531cf.185.2026.05.30.19.32.33
+        for <mechaniel@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 30 May 2026 19:32:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jzdunnigan@yahoo.com designates 66.163.190.33 as permitted sender) client-ip=66.163.190.33;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="HxjwlQ7/";
+       spf=pass (google.com: domain of jzdunnigan@yahoo.com designates 66.163.190.33 as permitted sender) smtp.mailfrom=jzdunnigan@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1780194753; bh=rtSAGYxjXSZlTVK5/7wxPjxqVjp+yIivg/3YnwQ7Tzo=; h=Date:From:To:References:Subject:From:Subject:Reply-To; b=HxjwlQ7/JbTNshsl9FgcVXt28rPpyoevEfIxMtPTvgxowHVUu+LgZsMnjGHfr9qAMmBTVQ7X6WrlkW55KPmgQwWqVTvL3w5rA1W4q1c9711VoCxWIs17p8RTEBrRe/3aQkxwvZzM+ah8Wix3yTlIb2N5T1+vTaGFVWacLVqk7hH37ItXg9UAegX/AR/XDOzmW/AZVBwGOnEySBSC9TYXmujJRIYC9kzhCKvSIk9A8T/+5TTZKGz8PVICsn629jyopiyNYCKrTqkHmTr9QHmLKL5/JdDPJUkIvWCDfl/QC4mAspM4DacmbZ66/twaVa58pbOKFlHtdgOWXffeuTcdGA==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1780194753; bh=EVG3IKFPehULys6WIt9NQAV0eBIQOrLr0aRBBI7wqML=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=PIOs0KgXGiCK+bUS+ans2AKcT6V87T61iJcfYMCkURZ50QZq0DardlSRewGMffmls7stBMk4tUMUKJwXi8EZBW2avFoetw3mpWDqBnai1W4nbph0wnpal9oU+HYx/n6VjaY8NVp0pBScD4qTBEmkgXqjzPIidI7zO2Yb6H6C6xVTNeFQnnQV1IkTSpYuHisloR0eDYwREOdnk8qW+8gN1g45jbZF4IpMBDTzQ0R4eE16l8jXO52UWilJK7jrIq4WOICsw61w87KBt2mGFZzYZ3/nmrtjHkTLhVNRF+Tx/0uZLJfbeTJA0VkYybCczAQKnSLuKYC0ls7RsCQ4RLTk6Q==
+X-YMail-OSG: 6VVWvXEVM1njCcFlfQlPuJ3p_ftMlXs.2NAnwHq2Tm6sY9ubtuk7L74Wzo0.xdU
+ rCXmxaGAowyhY0qnYrmLJdkVM0vHoDjoR84S9G4MzRG3v0uYM_cQIMA9gyoRsmRuNdPDoIYLezPj
+ LyzIKLACumUhe.UuvuPI1cMBYvSu197EB77b8XL_ygS4Hd2.rGS4lCEX95fdgdStaksF690zVEpN
+ .Z_e7aDPE3TYhObikkVrCkO8rcqczB95cHgG1QGs0e9yBfKULMYuPnUO08x54bEiUA0BrVsDlgFO
+ Wp1fF6v92kBKbHXtJa_EjOPrHMPeiA8sSZwMsKG.3QqkQimFG4nbElE0UBo4_v_RQkRGCj3pQmbd
+ .G5XZYSoKOfuplVmNxOvpTnnmk6bjpFltJSBWykAzXFLXmsZ8j84DzAodf4hbGvJ0m8jL47dRbTz
+ bM0qaVbp.VinACJVr8KKx5o14QBZhPOt8M0rnHQM0yoiUhsNsRgiEQAVGHXm3VekDIp7obSB2Ypu
+ HHpss2DoSnHh.uMKWDRrgtohNu9VKXK0R3bg.TjZwrkpnb_kSGK3_m7JUY0cqTBYEomK1wBDd7ru
+ MkucM6nc2bckrbheW7KCQF3RDRRrR_Nob9D8kvIgSprcCobu.2WoskIx3URbIQ.H9mSW7LJg7Lnt
+ t_N_t7fKFhtqS20G2TTpy6vDeNAuK4YPj1Zq7Eh1eWEZZ5ka5l_oPk2BrXOLR44KrUVtsomeAaWF
+ kz6yQXTzEZD.j.oVziBoPT9kjEaGvsdPVMo4Nz6PBmtw2LyHJzNgbj2qxAfA_WG0JfehVknknZFg
+ 3N_tZaxYvGKXAn_WC0Vh6rSaT97thrJG__I_12GAkcBaKqJWrRgGqnVRUvwJASb04NyuMAuR7Iah
+ 6oHMdT1ck05Y0hI0CJtz.d_A0lbpEs8C82uO6NVO7WjPPeicKPfBstzsACkxxqsMHwJFbXf9JAqm
+ 8Rms52b6Tapg2pnSaNEK4VQbc_uNlbNR5UNdoA2V_rmjvhYdxV6D9moJVLQW18GUHebvBGPEgM_S
+ yeoMZMz7GbjPXk56eL.lVWMN3SeVyR_jCcTzIpSuff5oGc_d9SCmiRc2Cn_6B3JNWebqpbfHaWDA
+ Omhq.19dzdvmuQFlSE8jRReVI7sBTGqs6Akks6tHbUEdiw2qrZnSmHhI3ImBrl_4zQiZBuxzlrbJ
+ xXIrTVf7V7VSlsDY.LIOr6rSXdRI5fcNvo6Owkorbb6uXdmNpg41KfkVls9P252VGljzEVQTsSpA
+ xGw47sTbPxDub1zNMhAA46byI9_rzPDVJcEMyWo49tmyejxZbTY0LLF1WKjI8SotJUw4cQFlVcQg
+ Am76vIjlsNyAPt23XRttZDAsYsMJz0VMr6L1kd9hHNis6VAXl6glHQA8fnNRJNqy9jSHneJBScuD
+ pC1kinm4y3qn0Kvq8.w8CTO9oJ4WC7.WZ9gxgrBcJlazxBneDQUWJRyoy0wu5Q1A5vV9rlGtUJkn
+ XfgmpjO8v9fjsksXKoNsMPbJttc2w1DzfwdaCTcQaYuno9xGrX_GN0yJNTMw5X88bsr5wQyUnAjM
+ cE.RSO5ok33e.VMIuZO8uKFiLNYGzu3XINXVucMucDhvSzweDwO5EmlIHih1q2kI3_yfbrDzqWc3
+ I3FhJYuHHIIyxoGIvj0gRPc4tfDvi7ycx_U9gRf.t1TnPkwWWgWcamwfz00NkisafU7.6ibUEHDd
+ psxUnnNJscn9HBJlvscxEtn6114LM8dc_JnRAacVFgMg61GWOS4KTPWYEO.Ot5TYIZUzBn44mdzP
+ cuG61VhqeyWmzPLtMQn1wg0nKhTrtAk.iEcD0tr8rsTlLN7wE6bCPCjR5H3NqcuX1n2fRSKCaerk
+ 6KyS3ZklKaSJgVcwz7HhGJL.mRbu20ucgi.7C5SFD0oQKWiFEW_PTqTO0pe87TT7svPXiqEIHO0B
+ VCamco5UFBHh4_HFa8eSwduBZQqZuPgKU5knXlkRKEapO_S_6BXNVZYoPDdMvTAscUjHgjS2sIYV
+ ok1FcrehYNLdCCGDUebkcl5GVh0lw0cfyCP.VkC_r31pye4ZQoUlBNCHOXmhLe0AbzH2QTFYZQnR
+ ehpNfoOPAdVeqLnv3MPjZfH4vNO6sw8IfHdJDJyPWD3IYpNK9TeL3Udnhnur6cEC6PSZoxMeIapp
+ bPsxVpMOpgIMmGbkoWVxAMTszlzayqIDOhq051qRHy.vAmBdt3bXK7ZEdpKXxkVUHPmIDWV1YD2F
+ 417pReFzn
+X-Sonic-MF: <jzdunnigan@yahoo.com>
+X-Sonic-ID: 74f2c9b6-0311-4e22-a2a7-4ee673bfd6b6
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic307.consmr.mail.ne1.yahoo.com with HTTP; Sun, 31 May 2026 02:32:33 +0000
+Date: Sun, 31 May 2026 02:32:29 +0000 (UTC)
+From: Jonathan Dunnigan <jzdunnigan@yahoo.com>
+To: "mechaniel@gmail.com" <mechaniel@gmail.com>
+Message-ID: <518418437.2547473.1780194749586@mail.yahoo.com>
+References: <518418437.2547473.1780194749586.ref@mail.yahoo.com>
+Subject: Formal Rejection of Payment Demand and Notice to Cease Unauthorized
+ Communications
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2547472_1201202592.1780194749585"
+X-Mailer: WebService/1.1.25725 YMailNovation
+Content-Length: 12603
+
+------=_Part_2547472_1201202592.1780194749585
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+Daniel Pall,
+
+This communication serves as a formal and final rejection of the "NOTICE OF=
+ PAYMENT DUE" and "NOTICE OF PAYMENT DUE_2.pdf" dated May 30, 2026. X-CEED =
+Tech Solutions LLC has never authorized, signed, or executed any employment=
+ agreement with you. The document titled "xceed_employment_agreement_daniel=
+_pall_corrected_separate (1)_2.pdf" is a unilateral, unsigned draft that po=
+ssesses no legal authority or binding effect on this company.
+
+
+
+Your reliance on Discord messages as a "premise of payment" is invalidated =
+by the very document you provided. Section XV of "xceed_employment_agreemen=
+t_daniel_pall_corrected_separate (1)_2.pdf" explicitly states: "No verbal s=
+tatement, silence, delay, continued work, staff title, Discord role, or inf=
+ormal message shall waive Employee=E2=80=99s right to compensation, commiss=
+ions, deferred compensation, hardship reserve balances, or equity unless th=
+e waiver is in a separate written agreement signed by Employee". By includi=
+ng this clause, you have legally disqualified the informal communications y=
+ou are currently attempting to use as evidence. You cannot simultaneously a=
+ssert the validity of an employment relationship while acknowledging that t=
+he evidence you cite=E2=80=94informal Discord messages=E2=80=94is explicitl=
+y excluded from creating or modifying financial obligations under the terms=
+ of the document you drafted.
+
+
+
+Furthermore, we are in possession of the "independent_contractor_agreement_=
+daniel_pall_xerox_signature_ready_signed_signed (2)_2.pdf". This document c=
+onfirms that effective May 25, 2026, you entered into a binding independent=
+ contractor agreement with Matthew Shaw (Xerox) to perform technical servic=
+es. Because your demand for payment covers the period from May 19 through M=
+ay 29, 2026, you are attempting to invoice X-CEED Tech Solutions LLC for ti=
+me that was already contractually committed to a separate client. You canno=
+t legally assert a full-time, at-will employment relationship with X-CEED w=
+hile operating as a signed independent contractor for another party during =
+that same timeframe.
+
+
+
+Your unauthorized acquisition and possession of our tax and filing document=
+ation, combined with your attempt to manufacture an employment status throu=
+gh contradictory documents and double-billing, constitutes fraud.
+
+X-CEED Tech Solutions LLC will not process any payments, nor will we engage=
+ in further discussions regarding your fabricated employment status. Consid=
+er this a final notice to cease all attempts to solicit payment from this b=
+usiness. Any further attempts to misrepresent your relationship with this c=
+ompany or to utilize our business identity for your own financial gain will=
+ be addressed as attempted fraud.
+
+This matter is now closed.
+
+X-CEED Tech Solutions LLC
+
+
+------=_Part_2547472_1201202592.1780194749585
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><p data-path-to-node=3D"0"><br></p></di=
+v><div><p data-path-to-node=3D"1">Daniel Pall,</p><p data-path-to-node=3D"2=
+" id=3D"ydp68a6c3c8p-rc_7b02b995088a2481-439"><span data-path-to-node=3D"2,=
+0">This communication serves as a formal and final rejection of the "NOTICE=
+ OF PAYMENT DUE" and "NOTICE OF PAYMENT DUE_2.pdf" dated May 30, 2026</span=
+><span data-path-to-node=3D"2,1"><!----><!----><!----><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><sup c=
+lass=3D"ydp68a6c3c8superscript"><!----></sup><!----><!----><!----><!----><!=
+----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----></span><span data-path-to-node=
+=3D"2,2">. X-CEED Tech Solutions LLC has never authorized, signed, or execu=
+ted any employment agreement with you. The document titled "xceed_employmen=
+t_agreement_daniel_pall_corrected_separate (1)_2.pdf" is a unilateral, unsi=
+gned draft that possesses no legal authority or binding effect on this comp=
+any</span><span data-path-to-node=3D"2,3"><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><sup class=3D"ydp68a6c3c8superscript"><!----></sup><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----></span><span data-path=
+-to-node=3D"2,4">.</span></p><!----><!----><!----><!----><!----><!----><!--=
+--><!----><p></p><p data-path-to-node=3D"3" id=3D"ydp68a6c3c8p-rc_7b02b9950=
+88a2481-440"><span data-path-to-node=3D"3,0">Your reliance on Discord messa=
+ges as a "premise of payment" is invalidated by the very document you provi=
+ded. Section XV of "xceed_employment_agreement_daniel_pall_corrected_separa=
+te (1)_2.pdf" explicitly states: "No verbal statement, silence, delay, cont=
+inued work, staff title, Discord role, or informal message shall waive Empl=
+oyee=E2=80=99s right to compensation, commissions, deferred compensation, h=
+ardship reserve balances, or equity unless the waiver is in a separate writ=
+ten agreement signed by Employee"</span><span data-path-to-node=3D"3,1"><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----><!----><!----><!----><sup class=3D"ydp68a6c3c8superscript"><!--=
+--></sup><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----></span><span data-path-to-node=3D"3,2">. By including this clause, =
+you have legally disqualified the informal communications you are currently=
+ attempting to use as evidence. You cannot simultaneously assert the validi=
+ty of an employment relationship while acknowledging that the evidence you =
+cite=E2=80=94informal Discord messages=E2=80=94is explicitly excluded from =
+creating or modifying financial obligations under the terms of the document=
+ you drafted</span><span data-path-to-node=3D"3,3"><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----><sup class=3D"ydp68a6c3c8superscript"><!----></sup><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----></span><span =
+data-path-to-node=3D"3,4">.</span></p><!----><!----><!----><!----><!----><!=
+----><!----><!----><p></p><p data-path-to-node=3D"4" id=3D"ydp68a6c3c8p-rc_=
+7b02b995088a2481-441"><span data-path-to-node=3D"4,0">Furthermore, we are i=
+n possession of the "independent_contractor_agreement_daniel_pall_xerox_sig=
+nature_ready_signed_signed (2)_2.pdf"</span><span data-path-to-node=3D"4,1"=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><sup class=3D"ydp68a6c3c8superscript">=
+<!----></sup><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----></span><span data-path-to-node=3D"4,2">. This document confirms=
+ that effective May 25, 2026, you entered into a binding independent contra=
+ctor agreement with Matthew Shaw (Xerox) to perform technical services</spa=
+n><span data-path-to-node=3D"4,3"><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><sup =
+class=3D"ydp68a6c3c8superscript"><!----></sup><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----></span><span data-path-to-node=
+=3D"4,4">. Because your demand for payment covers the period from May 19 th=
+rough May 29, 2026, you are attempting to invoice X-CEED Tech Solutions LLC=
+ for time that was already contractually committed to a separate client</sp=
+an><span data-path-to-node=3D"4,5"><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><sup=
+ class=3D"ydp68a6c3c8superscript"><!----></sup><!----><!----><!----><!---->=
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---=
+-><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----></span><span data-path-to-nod=
+e=3D"4,6">. You cannot legally assert a full-time, at-will employment relat=
+ionship with X-CEED while operating as a signed independent contractor for =
+another party during that same timeframe</span><span data-path-to-node=3D"4=
+,7"><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!--=
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!=
+----><!----><!----><!----><!----><!----><sup class=3D"ydp68a6c3c8superscrip=
+t"><!----></sup><!----><!----><!----><!----><!----><!----><!----><!----><!-=
+---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><=
+!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----=
+><!----><!----></span><span data-path-to-node=3D"4,8">.</span></p><!----><!=
+----><!----><!----><!----><!----><!----><!----><p></p><p data-path-to-node=
+=3D"5">Your unauthorized acquisition and possession of our tax and filing d=
+ocumentation, combined with your attempt to manufacture an employment statu=
+s through contradictory documents and double-billing, constitutes fraud.</p=
+><p data-path-to-node=3D"6">X-CEED Tech Solutions LLC will not process any =
+payments, nor will we engage in further discussions regarding your fabricat=
+ed employment status. Consider this a final notice to cease all attempts to=
+ solicit payment from this business. Any further attempts to misrepresent y=
+our relationship with this company or to utilize our business identity for =
+your own financial gain will be addressed as attempted fraud.</p><p data-pa=
+th-to-node=3D"7">This matter is now closed.</p><p data-path-to-node=3D"8">X=
+-CEED Tech Solutions LLC</p></div><br></div></div></body></html>
+------=_Part_2547472_1201202592.1780194749585--

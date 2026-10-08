@@ -1,0 +1,14 @@
+NAMES                 CREATED AT                      STATUS
+ip-manager            2026-05-22 19:45:15 -0700 PDT   Up 2 hours
+paymenter             2026-05-22 18:01:44 -0700 PDT   Up 4 hours
+nginx-proxy-manager   2026-05-22 17:19:12 -0700 PDT   Up 4 hours
+roundcube             2026-05-22 15:43:00 -0700 PDT   Up 6 hours
+skyhigh-bot           2026-05-22 14:37:37 -0700 PDT   Up 3 hours
+skyhigh-bot-db        2026-05-22 12:43:17 -0700 PDT   Up 9 hours (healthy)
+paymenter-db          2026-05-22 12:39:43 -0700 PDT   Up 9 hours (healthy)
+paymenter-redis       2026-05-22 12:39:43 -0700 PDT   Up 9 hours
+WordPress             2026-05-21 15:29:07 -0700 PDT   Up 24 hours
+Docker-Mailserver     2026-05-21 09:58:48 -0700 PDT   Up 5 hours
+nextdactyl            2026-05-20 15:11:29 -0700 PDT   Up 27 hours
+Wordpress-DB          2026-05-19 20:21:19 -0700 PDT   Up 24 hours
+Skyhigh-DB            2026-05-18 07:04:58 -0700 PDT   Up 24 hours

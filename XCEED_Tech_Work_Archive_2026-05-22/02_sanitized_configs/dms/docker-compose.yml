@@ -1,0 +1,29 @@
+services:
+  mailserver:
+    image: mailserver/docker-mailserver:latest
+    container_name: Docker-Mailserver
+    hostname: mail.x-ceed.net
+    env_file: mailserver.env
+    ports:
+      - "25:25"     # SMTP (incoming)
+      - "143:143"   # IMAP
+      - "465:465"   # ESMTP (submission, TLS)
+      - "587:587"   # ESMTP (submission, STARTTLS)
+      - "993:993"   # IMAPS
+      - "4190:4190" # ManageSieve
+    volumes:
+      - ./mail-data/:/var/mail/:rw
+      - ./mail-state/:/var/mail-state/:rw
+      - ./mail-log/:/var/log/mail/:rw
+      - ./config/:/tmp/docker-mailserver/:rw
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    restart: always
+    stop_grace_period: 1m
+    cap_add:
+      - NET_ADMIN # required for Fail2Ban
+    healthcheck:
+      test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
+      timeout: 3s
+      retries: 5
+      start_period: 90s

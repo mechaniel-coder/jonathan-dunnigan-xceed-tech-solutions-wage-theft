@@ -1,0 +1,13 @@
+services:
+  ip-manager:
+    build: ./server
+    container_name: ip-manager
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./server/data:/app/data
+    environment:
+      - PORT=3010
+      - IMAP_HOST=127.0.0.1
+      - IMAP_PORT=143
+      - DATA_FILE=/app/data/whitelist.json

@@ -1,0 +1,61 @@
+{
+    "version":  "2.0.0",
+    "options": {
+        "shell": {
+            "executable": "/bin/bash",
+            "args": ["-l", "-c"]
+        }
+    },
+    "tasks":  [
+                  {
+                      "label":  "🚀 Deploy Bot (pull + rebuild + restart)",
+                      "type":  "shell",
+                      "command":  "docker run --rm -v $(pwd):/repo -v /root/.ssh:/root/.ssh:ro alpine/git -C /repo pull \u0026\u0026 /tmp/docker-compose build bot \u0026\u0026 /tmp/docker-compose up -d bot",
+                      "group":  {
+                                    "kind":  "build",
+                                    "isDefault":  true
+                                },
+                      "presentation":  {
+                                           "echo":  true,
+                                           "reveal":  "always",
+                                           "focus":  true,
+                                           "panel":  "shared",
+                                           "clear":  true
+                                       },
+                      "problemMatcher":  [
+
+                                         ]
+                  },
+                  {
+                      "label":  "⚡ Quick Restart (no rebuild)",
+                      "type":  "shell",
+                      "command":  "docker restart skyhigh-bot",
+                      "presentation":  {
+                                           "echo":  true,
+                                           "reveal":  "always",
+                                           "focus":  false,
+                                           "panel":  "shared",
+                                           "clear":  false
+                                       },
+                      "problemMatcher":  [
+
+                                         ]
+                  },
+                  {
+                      "label":  "📋 View Bot Logs",
+                      "type":  "shell",
+                      "command":  "docker logs -f --tail=100 skyhigh-bot",
+                      "presentation":  {
+                                           "echo":  true,
+                                           "reveal":  "always",
+                                           "focus":  true,
+                                           "panel":  "dedicated",
+                                           "clear":  true
+                                       },
+                      "problemMatcher":  [
+
+                                         ],
+                      "isBackground":  true
+                  }
+              ]
+}

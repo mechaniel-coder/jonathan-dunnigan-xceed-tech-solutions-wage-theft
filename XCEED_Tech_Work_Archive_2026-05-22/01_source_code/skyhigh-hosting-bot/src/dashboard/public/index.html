@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skyhigh Bot Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="brand">
+        <img id="bot-avatar" src="" alt="Bot" onerror="this.style.display='none'">
+        <div>
+          <div id="bot-tag">Skyhigh Bot</div>
+          <div id="bot-status" class="status-dot online">Online</div>
+        </div>
+      </div>
+      <nav id="nav">
+        <button class="nav-btn active" data-page="overview">📊  Overview</button>
+        <div class="nav-group-label">Management</div>
+        <button class="nav-btn" data-page="economy">💰  Economy</button>
+        <button class="nav-btn" data-page="levels">⭐  Levels</button>
+        <button class="nav-btn" data-page="giveaways">🎉  Giveaways</button>
+        <button class="nav-btn" data-page="tickets">🎫  Tickets</button>
+        <button class="nav-btn" data-page="moderation">🔨  Moderation</button>
+        <div class="nav-group-label">Configuration</div>
+        <button class="nav-btn" data-page="settings">⚙️  Guild Settings</button>
+        <button class="nav-btn" data-page="autoresponders">💬  Auto-Responders</button>
+        <button class="nav-btn" data-page="customcmds">🔧  Custom Commands</button>
+        <button class="nav-btn" data-page="monitors">🖥️  Uptime Monitors</button>
+        <div class="nav-group-label">Moderation Tools</div>
+        <button class="nav-btn" data-page="automod">🛡️  Auto-Mod</button>
+        <button class="nav-btn" data-page="autoroles">🎭  Auto-Roles</button>
+        <button class="nav-btn" data-page="onboarding">🎓  Onboarding</button>
+        <button class="nav-btn" data-page="reminders">⏰  Reminders</button>
+        <button class="nav-btn" data-page="rolepanels">🎛️  Role Panels</button>
+        <div class="nav-group-label">Hosting / Payments</div>
+        <button class="nav-btn" data-page="payprocs">🔑  Payment Processors</button>
+        <button class="nav-btn" data-page="coinpkgs">🪙  Coin Packages</button>
+        <button class="nav-btn" data-page="payments">💳  Transactions</button>
+        <button class="nav-btn" data-page="ndusers">🖥️  Nextdactyl Users</button>
+        <div class="nav-group-label">Debug</div>
+        <button class="nav-btn" data-page="logs">📜  Live Logs</button>
+      </nav>
+      <div id="sidebar-footer">
+        <button id="restart-btn">🔄 Restart Bot</button>
+        <a href="/auth/logout" id="logout-link">Sign Out</a>
+      </div>
+    </aside>
+    <main id="content">
+      <div class="loading">Loading...</div>
+    </main>
+  </div>
+  <div id="toast"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+=== ip-manager files ===
+  File: /mnt/disk1/appdata/ip-manager/server/server.js
+  Size: 5139      	Blocks: 16         IO Block: 4096   regular file
+Device: 9,1	Inode: 1545072040  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-22 19:25:16.002558542 -0700
+Modify: 2026-05-22 19:42:59.359847463 -0700
+Change: 2026-05-22 19:42:59.359847463 -0700
+ Birth: 2026-05-22 19:25:16.002558542 -0700
+  File: /mnt/disk1/appdata/ip-manager/server/public/index.html
+  Size: 6259      	Blocks: 16         IO Block: 4096   regular file
+Device: 9,1	Inode: 1719848355  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-22 19:25:42.136074370 -0700
+Modify: 2026-05-22 19:25:53.952855445 -0700
+Change: 2026-05-22 19:25:53.952855445 -0700
+ Birth: 2026-05-22 19:25:42.136074370 -0700
+  File: /mnt/disk1/appdata/ip-manager/server/Dockerfile
+  Size: 241       	Blocks: 8          IO Block: 4096   regular file
+Device: 9,1	Inode: 1545072038  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-22 19:24:42.858172601 -0700
+Modify: 2026-05-22 19:32:26.736578264 -0700
+Change: 2026-05-22 19:32:26.736578264 -0700
+ Birth: 2026-05-22 19:24:42.858172601 -0700
+  File: /usr/local/bin/ip-whitelist-apply.sh
+  Size: 1881      	Blocks: 8          IO Block: 4096   regular file
+Device: 0,25	Inode: 963839      Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-22 19:43:41.740051942 -0700
+Modify: 2026-05-22 19:43:39.281098096 -0700
+Change: 2026-05-22 19:43:41.738051979 -0700
+ Birth: 2026-05-22 19:43:05.525731718 -0700
+  File: /boot/config/ip-whitelist-apply.sh
+  Size: 1881      	Blocks: 32         IO Block: 16384  regular file
+Device: 8,4	Inode: 112030      Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-22 17:00:00.000000000 -0700
+Modify: 2026-05-22 19:44:18.000000000 -0700
+Change: 2026-05-22 19:44:18.000000000 -0700
+ Birth: 2026-05-22 19:44:19.890000000 -0700
+  File: /boot/config/go
+  Size: 3715      	Blocks: 32         IO Block: 16384  regular file
+Device: 8,4	Inode: 76          Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-20 17:00:00.000000000 -0700
+Modify: 2026-05-22 19:46:06.000000000 -0700
+Change: 2026-05-22 19:46:06.000000000 -0700
+ Birth: 2026-05-21 11:33:48.550000000 -0700
+
+=== skyhigh-hosting-bot key files ===
+  File: /mnt/disk1/appdata/skyhigh-hosting-bot/src/index.js
+  Size: 6233      	Blocks: 16         IO Block: 4096   regular file
+Device: 9,1	Inode: 542512748   Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-21 11:05:51.151988761 -0700
+Modify: 2026-05-21 11:05:51.151988761 -0700
+Change: 2026-05-21 11:05:51.151988761 -0700
+ Birth: 2026-05-21 11:05:51.151988761 -0700
+  File: /mnt/disk1/appdata/skyhigh-hosting-bot/src/dashboard/index.js
+  Size: 4055      	Blocks: 8          IO Block: 4096   regular file
+Device: 9,1	Inode: 542512741   Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-21 11:05:51.139988995 -0700
+Modify: 2026-05-22 12:30:19.665192174 -0700
+Change: 2026-05-22 12:30:19.665192174 -0700
+ Birth: 2026-05-21 11:05:51.139988995 -0700
+  File: /mnt/disk1/appdata/skyhigh-hosting-bot/Dockerfile
+  Size: 447       	Blocks: 8          IO Block: 4096   regular file
+Device: 9,1	Inode: 662371      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-05-21 12:19:05.517770302 -0700
+Modify: 2026-05-21 12:19:05.517770302 -0700
+Change: 2026-05-21 12:19:05.517770302 -0700
+ Birth: 2026-05-21 12:19:05.517770302 -0700
+
+=== Docker inspect: container creation ===
+/ip-manager created=2026-05-23T02:45:15.380839268Z
+/skyhigh-bot created=2026-05-22T21:37:37.772703005Z
+/WordPress created=2026-05-21T22:29:07.371269138Z
+/Docker-Mailserver created=2026-05-21T16:58:48.945426894Z
+/nginx-proxy-manager created=2026-05-23T00:19:12.748731682Z
+/nextdactyl created=2026-05-20T22:11:29.970649365Z

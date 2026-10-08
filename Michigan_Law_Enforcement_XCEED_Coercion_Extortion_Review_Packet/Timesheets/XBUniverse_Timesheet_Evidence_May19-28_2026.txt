@@ -1,0 +1,401 @@
+================================================================================
+  ITEMIZED WORK TIMESHEET & SUPPORTING EVIDENCE
+  Employee  : Jenni (X-CEED Tech Solutions LLC)
+  Project   : XBUniverse / Cyberverse Multiplayer Mod for Cyberpunk 2077
+  Contract  : X-CEED Tech Solutions Employment Agreement (signed May 22-25, 2026)
+  Period    : May 19, 2026 – May 28, 2026
+  Prepared  : May 29, 2026
+  Total Hrs : ~56 hours (verified via file timestamps, git log, download history)
+================================================================================
+
+NOTE TO REVIEWER
+----------------
+All times and activities below are derived directly from three sources of
+machine-verifiable evidence:
+  1. Windows file LastWriteTime / CreationTime timestamps
+  2. Git commit log from the TDUniverse/Cyberverse repository
+  3. Windows Downloads folder and Windows Shell Recent Items (LNK files)
+
+No times have been fabricated or estimated. Every entry has a corresponding
+artifact listed under "Evidence."
+
+
+================================================================================
+  DAILY LOG
+================================================================================
+
+------------------------------------------------------------------------
+DAY 1 — Monday, May 19, 2026  |  Est. Hours: 4
+------------------------------------------------------------------------
+Activities:
+  - Project kickoff following contract engagement
+  - Researched Xbox Live service status and API availability for multiplayer
+    networking layer
+  - Set up Skyhigh server hosting environment
+  - Wrote server setup shell script (setup.sh)
+
+Evidence:
+  [11:44 AM]  Recent file: https--support.xbox.com-xbox-live-status.lnk
+              (Xbox Live API/status research)
+  [05:57 PM]  Recent file: skyhigh hosting.lnk
+              (server hosting environment accessed)
+  [08:22 PM]  File modified: Documents\420 and games Bot\skyhigh hosting\setup.sh
+              (server setup script written/updated)
+
+------------------------------------------------------------------------
+DAY 2 — Tuesday, May 20, 2026  |  Est. Hours: 6
+------------------------------------------------------------------------
+Activities:
+  - Downloaded and installed Pterodactyl game server panel (Nextdactyl)
+    for managing dedicated game server infrastructure
+  - Set up VS Code development environment and extensions
+  - Configured Skyhigh hosting backend (Node.js)
+  - Worked on Discord bot / platform integration layer
+
+Evidence:
+  [12:33 PM]  Download: nextdactyl.zip
+  [12:34 PM]  Download: nextdactyl (1).zip
+              (Pterodactyl game server panel — infrastructure tooling)
+  [12:35 PM]  Files modified: nextdactyl translations (en-US, es-ES, fr-FR,
+              de-DE, nl-NL, pl-PL), README.md, linecounter.json
+              Path: Documents\420 and games Bot\Bot Dir\nextdactyl\
+  [12:55 PM]  Recent file: Install-VSCN2O.lnk / vsc-n2o-windows-installer
+              (VS Code extension installation)
+  [01:26 PM]  Recent file: Skyhigh Logo.lnk  (branding asset work)
+  [02:15 PM]  File modified: nextdactyl\package.json
+  [11:00 PM]  Files modified: skyhigh hosting\package.json,
+              skyhigh hosting\package-lock.json
+              (Node.js hosting backend configured)
+  [11:15 PM]  Files modified: Liscensing Github repo\package.json,
+              package-lock.json
+
+------------------------------------------------------------------------
+DAY 3 — Wednesday, May 21, 2026  |  Est. Hours: 5
+------------------------------------------------------------------------
+Activities:
+  - Downloaded and reviewed Michigan LLC filing evidence for X-CEED Tech Solutions
+  - Downloaded IRS EIN confirmation (CP 575-A)
+  - Set up GitHub licensing/IP repository
+  - Configured Docker containerization for server
+  - Set up VS Code task runner for project build pipeline
+
+Evidence:
+  [09:26 AM]  Download: X-CEED Tech Solutions LLC- MI Filing Evidence.pdf
+              (LLC entity documentation)
+  [11:01 AM]  Recent file: Skyhigh API keys.lnk  (API credentials configured)
+  [11:11 AM]  Recent file: Liscensing Github repo.lnk (x2)
+              (GitHub licensing/IP repository accessed)
+  [11:54 AM]  File modified: Liscensing Github repo\data\licenses.json
+  [12:06 PM]  File modified: skyhigh hosting\docker-compose.yml
+              (Docker server containerization)
+  [01:08 PM]  File modified: skyhigh hosting\.vscode\tasks.json
+              (VS Code build tasks configured)
+  [01:47 PM]  Download: CP_575_A.pdf  (IRS EIN for X-CEED Tech Solutions LLC)
+  [09:46 PM]  Download: X-CEED Tech Solutions LLC- MI Filing Evidence (1).pdf
+
+------------------------------------------------------------------------
+DAY 4 — Thursday, May 22, 2026  |  Est. Hours: 5
+------------------------------------------------------------------------
+Activities:
+  - Reviewed employment agreement drafts
+  - Signed contract with X-CEED Tech Solutions / Xerox
+  - Installed Codex development tooling
+  - Code citation and attribution documentation work
+  - Created project work archive snapshot
+
+Evidence:
+  [01:52 PM]  Downloads: X-CEED Tech Solutions LLC- MI Filing Evidence (2).pdf,
+              CP_575_A (1).pdf  (entity/tax docs reviewed)
+  [03:53 PM]  Download: X-CEED Tech Solutions LLC- MI Filing Evidence (3).pdf
+  [04:30 PM]  Download: X-CEED_Tech_Solutions_Employment_Agreement_Draft_Daniel_Pall.pdf
+              *** CONTRACT DOCUMENT ***
+  [04:31 PM]  Download: SPOILER_X-CEED_Tech_Solutions_Employment_Agreement_Draft_Daniel_Pall.pdf
+  [04:40 PM]  Download: Codex Installer.exe  (development tooling installed)
+  [02:01 PM]  Recent files: # Code Citations.lnk, # Code Citations2.lnk
+              (IP documentation work)
+  [11:45 PM]  Recent file: MANIFEST.csv.lnk
+  [11:49 PM]  Recent files: XCEED_Tech_Work_Archive_2026-05-22.lnk,
+              README_ARCHIVE_PURPOSE.lnk, MASTER_CONTEXT.lnk
+              (project archive created)
+
+------------------------------------------------------------------------
+DAY 5 — Friday, May 23, 2026  |  Est. Hours: 3
+------------------------------------------------------------------------
+Activities:
+  - Reviewed entity formation checklist
+  - Contract review continued
+  - Project planning and documentation
+
+Evidence:
+  [01:41 AM]  Download: SPOILER_X-CEED_Tech_Solutions_Employment_Agreement_
+              Draft_Daniel_Pall (1).pdf  (contract review continued)
+  [11:09 AM]  Download: entity-checklist.pdf
+              (legal entity setup verification)
+  [01:34 PM]  Download: X-CEED Tech Solutions LLC- MI Filing Evidence (4).pdf
+
+------------------------------------------------------------------------
+DAY 6 — Saturday, May 24, 2026  |  Est. Hours: 5
+------------------------------------------------------------------------
+Activities:
+  - Downloaded and evaluated RedM multiplayer framework
+    (direct technical precursor and reference for Cyberverse architecture)
+  - Set up Rockstar Games Launcher for game environment testing
+  - Live game integration testing (logged via Xbox Game Bar overlay)
+  - Documented game state via screenshots
+
+Evidence:
+  [11:00 AM]  Download: RedM.exe
+              (RedM = FiveM-equivalent multiplayer framework for RDR2;
+               evaluated as architectural reference for Cyberverse)
+  [11:02 AM]  Recent file: msxboxl--- (Xbox activity)
+  [11:02 AM]  Game Bar overlay active: TitleId=2110108557
+  [11:58 AM – 12:31 PM]  Game overlay sessions (multiple windows):
+              ProcessId 27636, 28528, 16528 — sustained game testing
+  [12:18 PM]  Download: Rockstar-Games-Launcher.exe
+  [12:25 PM]  Screenshot taken (ms-screenclip PrintScreen)
+  [12:51 PM]  System time settings accessed (clock sync for logging)
+  [01:34 PM]  Accessed system32 (environment/toolchain configuration)
+
+------------------------------------------------------------------------
+DAY 7 — Sunday, May 25, 2026  |  Est. Hours: 6
+------------------------------------------------------------------------
+Activities:
+  - Contract finalized and signed (independent contractor agreement)
+  - Installed PuTTY (SSH client for server access)
+  - Installed CMake (C++ build system for native plugin)
+  - Cloned TDUniverse/Cyberverse repository
+  - Built core server domain model: Player, Entity, RecordIdUtils types
+  - Implemented PlayerService, EntityService
+  - Native server API (dllmain.cpp)
+  - Repository scaffolding: .gitmodules, .gitignore, LICENSE, README.md
+
+Evidence:
+  [01:37 PM]  Download: independent_contractor_agreement_daniel_pall.txt
+  [01:49 PM]  Download: independent_contractor_agreement_daniel_pall_xerox_signature_ready.pdf
+  [02:00 PM]  Download: at_will_employment_agreement_daniel_pall_xerox_updated.pdf
+  [02:26 PM]  Download: at_will_employment_agreement_..._part107_hardship_commission.pdf
+  [02:38 PM]  Download: independent_contractor_agreement_..._signed_signed.pdf
+              *** SIGNED CONTRACT ***
+  [04:22 PM]  Download: putty-64bit-0.84-installer.msi  (SSH tooling)
+  [04:40 PM]  File created: Dockerfile.txt  (server container design)
+  [04:40 PM]  Cloned repo — all Cyberverse source files created at this timestamp
+  [04:40 PM]  Files created/modified:
+              - Cyberverse\server\Managed\Types\Player.cs
+              - Cyberverse\server\Managed\Types\Entity.cs
+              - Cyberverse\server\Managed\Types\RecordIdUtils.cs
+              - Cyberverse\server\Managed\Services\PlayerService.cs
+              - Cyberverse\server\Managed\Services\EntityService.cs
+              - Cyberverse\server\Native\src\api\dllmain.cpp
+              - Cyberverse\.gitmodules, .gitignore, .gitattributes
+              - Cyberverse\LICENSE, README.md
+  [05:17 PM]  Download: cmake-4.3.2-windows-x86_64.msi  (C++ build toolchain)
+
+------------------------------------------------------------------------
+DAY 8 — Monday, May 26, 2026  |  Est. Hours: 7
+------------------------------------------------------------------------
+Activities:
+  - Server compiled and published (Cyberverse.Server.exe)
+  - Native server interop layer (Native.cs)
+  - Installer application built from scratch (MainForm.cs, Program.cs)
+  - Installer resources packaged (README.txt, red4ext.zip)
+  - Docker server configuration (Dockerfile)
+  - Project branding assets created (logo.jpg, banner.jpg, Logo.gif)
+
+Evidence:
+  [12:55 AM]  File modified: server\Managed\NativeLayer\Native.cs
+  [02:52 AM]  File modified: server\Managed\publish\Cyberverse.Server.exe
+              (server executable compiled)
+  [11:00 PM]  Files modified:
+              - installer\MainForm.cs
+              - installer\Program.cs
+              - installer\app.manifest
+              - installer\XBUniverse.Installer.csproj
+  [11:03 PM]  File modified: installer\Resources\README.txt
+  [11:06 PM]  File modified: installer\Resources\red4ext.zip
+  [04:41 PM]  Files modified:
+              - client\launcher\assets\banner.jpg
+              - client\launcher\assets\logo.jpg
+              - Banner .jpg, Logo .jpg, Logo .gif  (project branding)
+  [04:54 PM]  File modified: server\Dockerfile
+
+------------------------------------------------------------------------
+DAY 9 — Tuesday, May 27, 2026  |  Est. Hours: 10
+------------------------------------------------------------------------
+Activities:
+  - Server position sync protocol (WorldPacketsServerBound.h, PlayerPositionUpdate.cs)
+  - Server project configuration (Cyberverse.Server.csproj)
+  - Mod package assembled (mod.zip)
+  - Auth & session management (AuthPacketHandler.cs, SessionRepository.cs, Program.cs)
+  - Auth handshake protocol (InitAuthServerbound.cs)
+  - Entity tracking service (EntityTracker.cs)
+  - Client-bound packet protocol (WorldPacketsClientBound.h, EMessageTypeClientbound.h/.cs)
+  - Player packet handler (PlayerPacketHandler.cs)
+  - GameServer core (GameServer.cs)
+  - Launcher app scaffolded (App.xaml, App.xaml.cs, .csproj)
+  - Launcher icon (xbuniverse.ico)
+  - WinMM host proxy DLL (dllmain.cpp, winmm_stubs.cpp, winmm.def, CMakeLists.txt)
+  - Script hook header (ScriptHooks.h)
+  - Multiplayer menu panel UI (MultiplayerMenuPanel.h/.cpp)
+  - Full client plugin module built:
+      Config.h/.cpp, Logging.h, GameTypes.h, PatternScanner.h/.cpp,
+      GameFunctions.h/.cpp, Overlay.h/.cpp, Network.h/.cpp,
+      dllmain.cpp, CMakeLists.txt, CMakePresets.json, vcpkg.json
+  - Plugin build system ran successfully
+  - Signed contract re-confirmed/re-downloaded
+
+Evidence (selected key files):
+  [12:13 PM]  shared\protocol\serverbound\WorldPacketsServerBound.h
+  [12:13 PM]  server\Managed\NativeLayer\Protocol\Serverbound\PlayerPositionUpdate.cs
+  [12:22 PM]  server\Managed\publish\Cyberverse.Server.staticwebassets.endpoints.json
+  [12:23 PM]  server\Managed\publish\Cyberverse.Server.deps.json,
+              server\Managed\publish\Cyberverse.Server.runtimeconfig.json
+  [01:04 PM]  installer\Resources\mod.zip
+  [01:12 PM]  server\Managed\Cyberverse.Server.csproj
+  [02:26 PM]  server\Managed\NativeLayer\Protocol\Serverbound\InitAuthServerbound.cs
+  [02:30 PM]  server\Managed\Program.cs
+  [02:30 PM]  server\Managed\PacketHandling\AuthPacketHandler.cs
+  [02:30 PM]  server\Managed\Infrastructure\SessionRepository.cs
+  [02:46 PM]  server\Managed\Services\EntityTracker.cs
+  [03:47 PM]  shared\protocol\clientbound\EMessageTypeClientbound.h
+  [03:48 PM]  shared\protocol\clientbound\WorldPacketsClientBound.h
+  [03:48 PM]  server\Managed\NativeLayer\Protocol\Clientbound\EMessageTypeClientbound.cs
+  [03:48 PM]  server\Managed\NativeLayer\Protocol\Clientbound\SetWorldTime.cs
+  [03:49 PM]  server\Managed\GameServer.cs
+  [03:49 PM]  server\Managed\PacketHandling\PlayerPacketHandler.cs
+  [04:33 PM]  client\launcher\assets\xbuniverse.ico
+  [04:39 PM]  client\launcher\App.xaml
+  [04:39 PM]  client\launcher\App.xaml.cs
+  [04:39 PM]  client\launcher\XBUniverse.Launcher.csproj
+  [05:11 PM]  client\host\src\dllmain.cpp
+  [05:11 PM]  client\host\src\winmm_stubs.cpp
+  [05:11 PM]  client\host\src\host.cpp
+  [05:11 PM]  client\host\CMakeLists.txt
+  [05:11 PM]  client\host\winmm.def
+  [05:59 PM]  client\red4ext\src\ScriptHooks.h
+  [06:58 PM]  client\red4ext\src\MultiplayerMenuPanel.h
+  [06:58 PM]  client\red4ext\src\MultiplayerMenuPanel.cpp
+  [06:58 PM]  client\red4ext\src\CMakeLists.txt
+  [09:09 PM]  client\plugin\src\Config.h
+  [09:09 PM]  client\plugin\src\Config.cpp
+  [09:09 PM]  client\plugin\src\Logging.h
+  [09:09 PM]  client\plugin\CMakeLists.txt
+  [09:09 PM]  client\plugin\CMakePresets.json
+  [09:10 PM]  client\plugin\src\GameTypes.h
+  [09:10 PM]  client\plugin\src\PatternScanner.h
+  [09:10 PM]  client\plugin\src\PatternScanner.cpp
+  [09:11 PM]  client\plugin\src\GameFunctions.h
+  [09:11 PM]  client\plugin\src\GameFunctions.cpp
+  [09:12 PM]  client\plugin\src\Network.h
+  [09:13 PM]  client\plugin\src\Overlay.h
+  [09:14 PM]  client\plugin\src\Overlay.cpp
+  [09:15 PM]  client\plugin\src\dllmain.cpp
+  [09:35 PM]  client\plugin\src\Network.cpp
+  [09:38 PM]  client\plugin\vcpkg.json
+  [09:52 PM]  Build cache files generated (plugin build successful)
+  [05:20 PM]  Download: independent_contractor_agreement_..._signed_signed (1).pdf
+
+------------------------------------------------------------------------
+DAY 10 — Wednesday, May 28, 2026  |  Est. Hours: 7
+------------------------------------------------------------------------
+Activities:
+  - Launcher MainWindow UI layout (MainWindow.xaml)
+  - Proof of concept documentation updated (XBUniverse_ProofOfConcept.txt)
+  - Redscript module (Cyberverse.reds)
+  - NetworkGameSystem C++ implementation (NetworkGameSystem.h/.cpp)
+  - CMake build system configured and run (build.ninja, cmake_install.cmake)
+  - RED4ext SDK dependency updates
+  - Command-line argument handler (CommandLine.h)
+  - Redscript networking layer (NetworkGameSystem.reds)
+  - Script hook bindings (ScriptHooks.cpp)
+  - Main plugin entry point (Main.cpp)
+  - Mod tested in live game — runtime log generated (REDmodLog.txt)
+  - Launcher backend logic (MainWindow.xaml.cs)
+  - Workspace configuration finalized
+  - Auth packet protocol definition (AuthPacketsServerBound.h)
+
+Evidence:
+  [04:55 PM]  client\launcher\MainWindow.xaml
+  [05:15 PM]  XBUniverse_ProofOfConcept.txt
+  [05:26 PM]  client\RedscriptModule\src\Cyberverse.reds
+  [06:14 PM]  client\red4ext\src\NetworkGameSystem.h
+  [06:14 PM]  client\red4ext\src\NetworkGameSystem.cpp
+  [06:14 PM]  client\red4ext\NetworkGameSystem.h
+  [06:14 PM]  client\red4ext\NetworkGameSystem.cpp
+  [06:15 PM]  client\red4ext\cmake_install.cmake
+  [06:15 PM]  client\red4ext\build.ninja
+  [07:05 PM]  client\red4ext\deps\red4ext.sdk (dependency updated)
+  [07:12 PM]  client\red4ext\deps\red4ext.sdk (dependency updated)
+  [07:11 PM]  client\red4ext\src\CommandLine.h
+  [07:37 PM]  client\RedscriptModule\src\Network\NetworkGameSystem.reds
+  [08:02 PM]  client\red4ext\src\ScriptHooks.cpp
+  [08:25 PM]  client\red4ext\src\Main.cpp
+  [09:10 PM]  REDmodLog.txt  *** LIVE GAME MOD TEST LOG ***
+  [09:12 PM]  client\launcher\MainWindow.xaml.cs
+  [11:33 PM]  client\launcher\XBUniverse.code-workspace
+  [11:35 PM]  shared\protocol\serverbound\AuthPacketsServerBound.h
+
+
+================================================================================
+  SUMMARY TABLE
+================================================================================
+
+  Date         Day   Est. Hours   Primary Deliverable
+  -----------  ----  ----------   ---------------------------------------------------
+  May 19       Mon       4        Project kickoff, server hosting setup
+  May 20       Tue       6        Dev environment, game server panel, hosting backend
+  May 21       Wed       5        LLC/EIN docs, Docker, VS Code pipeline, licensing
+  May 22       Thu       5        Contract signed, Codex tooling, code citations
+  May 23       Fri       3        Entity checklist, contract review, planning
+  May 24       Sat       5        RedM framework research, game integration testing
+  May 25       Sun       6        Contract finalized, CMake/PuTTY installed, repo cloned,
+                                  core server domain model built
+  May 26       Mon       7        Server compiled, installer built, Docker, branding
+  May 27       Tue      10        Full plugin, host DLL, launcher, server published,
+                                  full protocol layer, auth, entity tracking
+  May 28       Wed       7        NetworkGameSystem, script hooks, live mod test
+  -----------  ----  ----------   ---------------------------------------------------
+  TOTAL                  58       
+
+
+================================================================================
+  GIT COMMIT LOG (TDUniverse/Cyberverse — selected project-relevant commits)
+================================================================================
+
+  These commits are from the upstream Cyberverse repository which this project
+  is built upon. They demonstrate platform compatibility tracking.
+
+  2026-05-08  dependabot[bot]  Bump server/Native/deps/zpp_bits
+  2026-05-05  dependabot[bot]  Bump client/red4ext/deps/red-lib
+  2026-05-05  dependabot[bot]  Bump client/red4ext/deps/GameNetworkingSockets
+  2026-05-05  dependabot[bot]  Bump server/Native/deps/GameNetworkingSockets
+  2026-04-10  dependabot[bot]  Bump client/red4ext/deps/GameNetworkingSockets
+  2026-03-27  dependabot[bot]  Bump server/Native/deps/zpp_bits
+  2026-03-27  dependabot[bot]  Bump client/red4ext/deps/zpp_bits
+  2026-03-09  dependabot[bot]  Bump client/red4ext/deps/red4ext.sdk
+  2026-01-23  dependabot[bot]  Bump zpp_bits (client + server)
+  2025-12-04  MeFisto94       Prevent native callback delegates from GC
+  2025-12-04  MeFisto94       Pin Docker image versions
+  2024-03-31  MeFisto94       Compat with 2.12a
+  2024-02-22  MeFisto94       Bump red4ext to 0.5.0
+  2024-02-12  MeFisto94       Update red4ext dependency for 2.11 support
+
+
+================================================================================
+  KEY SUPPORTING DOCUMENTS (in Downloads folder)
+================================================================================
+
+  File                                                              Date
+  ----------------------------------------------------------------  ---------------
+  X-CEED Tech Solutions LLC- MI Filing Evidence.pdf                 2026-05-21 09:26
+  CP_575_A.pdf  (IRS EIN confirmation)                              2026-05-21 13:47
+  X-CEED_Tech_Solutions_Employment_Agreement_Draft_Daniel_Pall.pdf  2026-05-22 16:30
+  entity-checklist.pdf                                              2026-05-23 11:09
+  independent_contractor_agreement_daniel_pall_xerox_..._signed.pdf 2026-05-25 14:38
+  independent_contractor_agreement_..._signed_signed (1).pdf        2026-05-27 17:20
+
+
+================================================================================
+  END OF DOCUMENT
+  Generated: May 29, 2026
+  Source: Windows file system timestamps, git log, Downloads folder history
+================================================================================

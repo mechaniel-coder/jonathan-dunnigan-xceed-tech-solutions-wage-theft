@@ -1,0 +1,67 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: skyhigh-bot-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: skyhigh_bot
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - /mnt/user/appdata/skyhigh-bot-db:/var/lib/mysql
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./schema_v2.sql:/docker-entrypoint-initdb.d/02-schema_v2.sql
+      - ./schema_v3.sql:/docker-entrypoint-initdb.d/03-schema_v3.sql
+      - ./schema_v4.sql:/docker-entrypoint-initdb.d/04-schema_v4.sql
+      - ./schema_v5.sql:/docker-entrypoint-initdb.d/05-schema_v5.sql
+      - ./schema_v6.sql:/docker-entrypoint-initdb.d/06-schema_v6.sql
+      - ./schema_v7.sql:/docker-entrypoint-initdb.d/07-schema_v7.sql
+      - ./schema_v8.sql:/docker-entrypoint-initdb.d/08-schema_v8.sql
+      - ./schema_v9.sql:/docker-entrypoint-initdb.d/09-schema_v9.sql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  bot:
+    build: .
+    container_name: skyhigh-bot
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN}
+      CLIENT_ID: ${CLIENT_ID}
+      GUILD_ID: ${GUILD_ID}
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: skyhigh_bot
+      HEALTH_PORT: 3002
+      DISCORD_CLIENT_SECRET: ${DISCORD_CLIENT_SECRET}
+      SESSION_SECRET: ${SESSION_SECRET}
+      DASHBOARD_ADMIN_IDS: ${DASHBOARD_ADMIN_IDS}
+      OAUTH_REDIRECT_URI: ${OAUTH_REDIRECT_URI}
+      WEBSITE_API_URL: ${WEBSITE_API_URL}
+      WEBSITE_API_KEY: ${WEBSITE_API_KEY}
+      NEXTDACTYL_URL: ${NEXTDACTYL_URL}
+      NEXTDACTYL_SYNC_SECRET: ${NEXTDACTYL_SYNC_SECRET}
+      PORTAL_BASE_URL: ${PORTAL_BASE_URL:-}
+      LICENSE_TOKEN: ${LICENSE_TOKEN}
+      # Paymenter integration (billing portal + account linking)
+      PAYMENTER_URL: ${PAYMENTER_URL:-}
+      PAYMENTER_API_KEY: ${PAYMENTER_API_KEY:-}
+      PAYMENTER_WEBHOOK_SECRET: ${PAYMENTER_WEBHOOK_SECRET:-}
+    ports:
+      - "3002:3002"
+    networks:
+      - default
+      - skyhigh-net
+
+networks:
+  skyhigh-net:
+    external: true

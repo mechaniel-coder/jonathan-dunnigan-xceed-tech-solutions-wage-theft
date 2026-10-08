@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-CEED Access Manager</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .header .icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #1f6feb, #388bfd);
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+    .header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f0f6fc;
+      letter-spacing: -0.3px;
+    }
+    .header p {
+      font-size: 13px;
+      color: #8b949e;
+      margin-top: 5px;
+    }
+
+    .ip-box {
+      background: #0d1117;
+      border: 1px solid #1f6feb;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ip-box .pulse {
+      width: 8px; height: 8px;
+      background: #388bfd;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .ip-box .label { font-size: 12px; color: #8b949e; }
+    .ip-box .value { font-size: 15px; color: #79c0ff; font-family: 'Courier New', monospace; font-weight: 600; }
+
+    .field { margin-bottom: 14px; }
+    label { display: block; font-size: 13px; color: #8b949e; font-weight: 500; margin-bottom: 6px; }
+
+    input {
+      display: block;
+      width: 100%;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 9px 12px;
+      color: #f0f6fc;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    input:focus { border-color: #388bfd; box-shadow: 0 0 0 3px rgba(56,139,253,0.15); }
+    input::placeholder { color: #484f58; }
+
+    button {
+      display: block;
+      width: 100%;
+      background: #1f6feb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    button:hover:not(:disabled) { background: #388bfd; }
+    button:active:not(:disabled) { transform: scale(0.99); }
+    button:disabled { background: #21262d; color: #484f58; cursor: not-allowed; }
+
+    .alert {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.5;
+      display: none;
+    }
+    .alert.success {
+      background: #0f2d1a;
+      border: 1px solid #196c2e;
+      color: #56d364;
+    }
+    .alert.error {
+      background: #2d1117;
+      border: 1px solid #6e2930;
+      color: #ff7b72;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 11px;
+      color: #484f58;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="icon">🔐</div>
+      <h1>X-CEED Access Manager</h1>
+      <p>Register your IP to access internal services</p>
+    </div>
+
+    <div class="ip-box">
+      <div class="pulse"></div>
+      <div>
+        <div class="label">Your current IP address</div>
+        <div class="value" id="detected-ip">Detecting…</div>
+      </div>
+    </div>
+
+    <form id="form" autocomplete="on">
+      <div class="field">
+        <label for="username">Email Address</label>
+        <input type="email" id="username" name="username"
+               placeholder="you@x-ceed.net" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"
+               placeholder="Mailserver password" required autocomplete="current-password">
+      </div>
+      <button type="submit" id="btn">Register My IP</button>
+    </form>
+
+    <div class="alert" id="alert"></div>
+
+    <div class="footer">
+      Authenticates against X-CEED mail server &bull; x-ceed.net
+    </div>
+  </div>
+
+  <script>
+    fetch('/my-ip')
+      .then(r => r.json())
+      .then(d => { document.getElementById('detected-ip').textContent = d.ip || 'Unknown'; })
+      .catch(() => { document.getElementById('detected-ip').textContent = 'Unknown'; });
+
+    document.getElementById('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn   = document.getElementById('btn');
+      const alert = document.getElementById('alert');
+
+      btn.disabled = true;
+      btn.textContent = 'Registering…';
+      alert.style.display = 'none';
+
+      try {
+        const res = await fetch('/update-ip', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: document.getElementById('username').value.trim(),
+            password: document.getElementById('password').value,
+          }),
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          alert.className = 'alert success';
+          alert.textContent = '✓ ' + data.message + ' — you now have access to internal services.';
+          document.getElementById('password').value = '';
+        } else {
+          alert.className = 'alert error';
+          alert.textContent = '✗ ' + (data.error || 'An error occurred.');
+        }
+      } catch {
+        alert.className = 'alert error';
+        alert.textContent = '✗ Connection error. Please try again.';
+      }
+
+      alert.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Register My IP';
+    });
+  </script>
+</body>
+</html>

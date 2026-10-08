@@ -1,0 +1,61 @@
+DLSE X-CEED WAGE CLAIM — 10 FILES TO UPLOAD
+==================================================
+
+Claimant: Daniel Pall (TechyMechy) — mechaniel@gmail.com
+Respondent: X-CEED Tech Solutions LLC / Jonathan Dunnigan (jzdunnigan@yahoo.com)
+Work location: 909 W Temple St, Los Angeles, CA 90012
+Amount claimed: $2,261.78 (unpaid wages, May 19–29, 2026)
+
+Upload these 10 files on the Certification step (X-CEED only — no Xerox):
+
+01_DLSE_Cover_Summary.pdf
+  Source: California_DLSE_XCEED_Unpaid_Compensation_Packet\DLSE_COVER_SUMMARY.html
+  Action: Open in Edge → Ctrl+P → Save as PDF
+  Contains: Full claim narrative, parties, amount, legal theories, denial rebuttal
+
+02_Employment_Agreement.pdf
+  Source: Michigan_Law_Enforcement_XCEED_Coercion_Extortion_Review_Packet\Employment_Agreement\xceed_employment_agreement_daniel_pall_corrected_separate.pdf
+  Action: Upload as-is (already PDF)
+  Contains: CTO role, $1,352/week, equity, commission, termination pay clause
+
+03_Discord_Communications_Part1.pdf
+  Source images: Comunications\Discord Messages #1.jpg, #2.jpg, DM3.jpg, dm4.jpg–dm17.jpg
+  Action: Combine into one PDF (Print to PDF from image viewer, or use Edge print)
+  Contains: Work requests, CTO title, payroll/employee number, payment admissions
+
+04_Discord_Communications_Part2.pdf
+  Source images: Comunications\dm18.jpg–dm34.jpg
+  Contains: Payment withholding, fraud accusations, investigation demands, refusal
+
+05_iMessage_Communications.pdf
+  Source images: Comunications\tm1.png–tm15.png
+  Contains: Direct deposit setup, formal payment demand, read receipt, coercion statements
+
+06_Email_Correspondence.pdf
+  Source: Comunications\Formal Rejection...eml + email continued.eml
+  Contains: X-CEED denial (May 30) + claimant rebuttal (June 2)
+
+07_Technical_Work_Proof.pdf
+  Source: XCEED_Tech_Work_Archive_2026-05-22\07_screenshots_or_evidence\ (all 7 .txt files)
+  Contains: Git commit logs, Docker timestamps, 37+ SSH sessions — proves work May 19–22
+
+08_Work_Documentation.pdf
+  Source: WORK_COMPLETED.md, SECURITY_AUDIT_SUMMARY.md, README_ARCHIVE_PURPOSE.md, MANIFEST.csv
+  Contains: Session work log, security hardening audit, archive integrity hashes
+
+09_Work_Timesheet_Evidence.pdf
+  Source: XBUniverse_Timesheet_Evidence_May19-28_2026.txt
+  Contains: Machine-generated work log; May 19–24 is exclusively X-CEED infrastructure work
+
+10_Infrastructure_Summary.pdf
+  Source: XCEED_Tech_Work_Archive_2026-05-22\MASTER_CONTEXT.md
+  Contains: Full x-ceed.net server documentation — proof of CTO-level deliverables
+
+QUICK PRINT TIP:
+  For text files (.md, .txt, .eml): open in Notepad or Edge, Ctrl+P, Save as PDF.
+  For screenshots: select all images → right-click Print → Microsoft Print to PDF.
+
+EXCLUDED (Xerox only — do NOT upload for this claim):
+  - Xerox_XBUniverse_Contractor_Invoice_Claim folder
+  - XBUniverse_Timesheet_Evidence_May25-28_2026.txt (Xerox-only corrected timesheet)
+  - xerox_owes.html

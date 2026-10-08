@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skyhigh Bot — Login</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d1117; color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex; align-items: center; justify-content: center; height: 100vh;
+    }
+    .card {
+      background: #161b22; border: 1px solid #30363d; border-radius: 12px;
+      padding: 48px 40px; text-align: center; width: 340px;
+    }
+    .logo { font-size: 36px; margin-bottom: 12px; }
+    h1 { font-size: 22px; color: #e6edf3; margin-bottom: 6px; }
+    p  { font-size: 14px; color: #8b949e; margin-bottom: 32px; }
+    a.btn {
+      display: inline-block; background: #5865F2; color: #fff;
+      text-decoration: none; padding: 12px 28px; border-radius: 8px;
+      font-size: 15px; font-weight: 600; transition: background .2s;
+    }
+    a.btn:hover { background: #4752c4; }
+    .error {
+      background: #3d1f1f; border: 1px solid #f85149; color: #f85149;
+      border-radius: 6px; padding: 10px 14px; font-size: 13px; margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🚀</div>
+    <h1>Skyhigh Bot Portal</h1>
+    <p>Sign in with Discord to access the developer dashboard.</p>
+    <div id="err" class="error" style="display:none"></div>
+    <a href="/auth/discord" class="btn">Login with Discord</a>
+  </div>
+  <script>
+    const p = new URLSearchParams(location.search);
+    if (p.get('error') === 'unauthorized') {
+      const el = document.getElementById('err');
+      el.textContent = 'Your Discord account is not authorized to access this dashboard.';
+      el.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
